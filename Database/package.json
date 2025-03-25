@@ -1,0 +1,9 @@
+{
+  "name": "budget-tracker-database",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Database service starting...\"",
+    "test": "echo \"Running database tests...\""
+  }
+}

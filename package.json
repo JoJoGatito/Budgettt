@@ -1,0 +1,14 @@
+{
+  "name": "budget-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "Frontend",
+    "Database"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=Frontend",
+    "build": "npm run build --workspace=Frontend",
+    "test": "npm run test --workspace=Frontend"
+  }
+}
