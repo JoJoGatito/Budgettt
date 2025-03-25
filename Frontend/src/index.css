@@ -1,18 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can go here */
+@layer components {}
+/*  .btn-primary {
+/*    @apply text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors;
+
+/* Default styles - these will be overridden by Tailwind */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* The rest of your styles can remain, but they'll be overridden by Tailwind where there's overlap */
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,10 +31,12 @@ a:hover {
   color: #535bf2;
 }
 
+/* Remove or modify this as it will center everything on the page */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* These styles will make everything centered, which might not be what you want */
+  /* display: flex; */
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }

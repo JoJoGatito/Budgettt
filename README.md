@@ -1,26 +1,37 @@
-# Budget Tracker
+# Budget Tracker Application
 
-A comprehensive budget tracking application with frontend and database components.
+A personal budget tracking application with multi-user sync and offline capabilities.
 
 ## Project Structure
 
-This is a monorepo containing:
+- **database/**: SQL scripts for Supabase setup
+  - **migrations/**: Database schema migrations
+  - **seeds/**: Seed data scripts
+  - **functions/**: SQL functions for business logic
+- **frontend/**: Vite React application (PWA)
 
-- `Frontend/`: React TypeScript PWA application
-- `Database/`: Database services and schema
+## Setup Instructions
 
-## Getting Started
+### Database Setup
 
-```bash
-# Install dependencies for all workspaces
-npm install
+1. Create a new Supabase project
+2. Run the SQL scripts in the following order:
+   - `database/migrations/01_initial_tables.sql`
+   - `database/migrations/02_add_foreign_keys.sql`
+   - `database/seeds/default_categories.sql` (after creating your first user)
+   - `database/functions/update_transaction_with_version.sql`
 
-# Start the frontend development server
-npm start
+### Frontend Setup
 
-# Build the frontend for production
-npm run build
+1. Navigate to the frontend directory: `cd frontend`
+2. Install dependencies: `npm install`
+3. Create a `.env` file with your Supabase credentials
+4. Start the development server: `npm run dev`
 
-# Run tests
-npm test
-```
+## Features
+
+- Multi-user synchronization
+- Offline capabilities
+- Transaction history and categorization
+- Goal tracking
+- Future SimpleFIN integration
